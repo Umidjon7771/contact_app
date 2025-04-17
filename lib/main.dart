@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        textTheme: GoogleFonts.workSansTextTheme(),
+        textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
       home: Home(
@@ -35,8 +35,7 @@ class InheritedData extends InheritedWidget {
   });
 
   static InheritedData of(BuildContext context) {
-    final InheritedData? result =
-        context.dependOnInheritedWidgetOfExactType<InheritedData>();
+    final InheritedData? result = context.dependOnInheritedWidgetOfExactType<InheritedData>();
     assert(result != null, 'No InheritedData found in context');
     return result!;
   }

@@ -1,5 +1,6 @@
 import 'package:contact_app/model/model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class UpdatePage extends StatefulWidget {
   final Contact contact;
@@ -49,7 +50,11 @@ class _UpdatePageState extends State<UpdatePage> {
               controller: _controllerNumber,
               decoration:
               InputDecoration(labelText: "Number"),
-              keyboardType: TextInputType.phone,
+              keyboardType: TextInputType.number,
+              inputFormatters: [
+                FilteringTextInputFormatter.digitsOnly,
+
+              ],
             ),
             SizedBox(
               height: 20,
